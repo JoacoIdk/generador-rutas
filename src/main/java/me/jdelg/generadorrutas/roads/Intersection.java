@@ -21,6 +21,10 @@ public class Intersection {
         return roads;
     }
 
+    public void addRoad(Road road) {
+        roads.add(road);
+    }
+
     @Override
     public String toString() {
         return "Intersection{" +

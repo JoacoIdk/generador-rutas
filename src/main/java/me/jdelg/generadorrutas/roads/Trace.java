@@ -10,10 +10,11 @@ public class Trace {
     private Point end;
     private double radius;
     private RoadType type;
+    private Sense sense;
     private int cost;
     private boolean open;
 
-    public Trace(int id, String name, double width, Point start, Point end, double radius, RoadType type, int cost, boolean open) {
+    public Trace(int id, String name, double width, Point start, Point end, double radius, RoadType type, Sense sense, int cost, boolean open) {
         this.id = id;
         this.name = name;
         this.width = width;
@@ -21,6 +22,7 @@ public class Trace {
         this.end = end;
         this.radius = radius;
         this.type = type;
+        this.sense = sense;
         this.cost = cost;
         this.open = open;
     }
@@ -51,6 +53,10 @@ public class Trace {
 
     public RoadType getType() {
         return type;
+    }
+
+    public Sense getSense() {
+        return sense;
     }
 
     public int getCost() {

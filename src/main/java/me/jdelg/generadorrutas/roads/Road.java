@@ -8,10 +8,11 @@ public class Road {
     private Intersection end;
     private double radius;
     private RoadType type;
+    private Sense sense;
     private int cost;
     private boolean open;
 
-    public Road(int id, String name, double width, Intersection start, Intersection end, double radius, RoadType type, int cost, boolean open) {
+    public Road(int id, String name, double width, Intersection start, Intersection end, double radius, RoadType type, Sense sense, int cost, boolean open) {
         this.id = id;
         this.name = name;
         this.width = width;
@@ -19,6 +20,7 @@ public class Road {
         this.end = end;
         this.radius = radius;
         this.type = type;
+        this.sense = sense;
         this.cost = cost;
         this.open = open;
     }
@@ -49,6 +51,10 @@ public class Road {
 
     public RoadType getType() {
         return type;
+    }
+
+    public Sense getSense() {
+        return sense;
     }
 
     public int getCost() {
